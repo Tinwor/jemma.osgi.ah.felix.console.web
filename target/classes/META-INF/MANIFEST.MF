@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1436165323505
+Build-Jdk: 1.8.0_45
+Built-By: fabio
+Bundle-ActivationPolicy: lazy
+Bundle-Category: Automation@Home
+Bundle-ManifestVersion: 2
+Bundle-Name: AH Apache Felix Web Console Plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.energy-home.jemma.osgi.ah.felix.console.web
+Bundle-Vendor: Telecom Italia
+Bundle-Version: 1.0.9
+Created-By: Apache Maven Bundle Plugin
+Import-Package: org.energy_home.jemma.ah.hac.lib;version="[3.0.0,3.1.0)"
+ ,org.energy_home.jemma.ah.hac.lib.ext;version="[3.4.0,3.5.0)",org.energ
+ y_home.jemma.ah.hac;version="[3.0.0,3.1.0)",javax.servlet;version="[2.6
+ ,3)",javax.servlet.http;version="[2.6,3)",org.slf4j;version="[1.6,2)",o
+ rg.apache.felix.webconsole;version="[3.1,4)",org.osgi.framework;version
+ ="[1.5,2)",javax.management,org.energy_home.jemma.ah.cluster.ah;version
+ ="[3.0,4)"
+Provide-Capability: osgi.service;effective:=active;objectClass="javax.se
+ rvlet.Servlet";felix.webconsole.title=AH;felix.webconsole.label=ah
+Require-Bundle: jemma.osgi.ah.hac.lib;bundle-version="[3.1.0,3.2.0)"
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =org.energy_home.jemma.ah.hac.lib.ext.IAppliancesProxy)",osgi.service;e
+ ffective:=active;resolution:=optional;filter:="(objectClass=org.energy_
+ home.jemma.ah.hac.lib.ext.INetworkManager)",osgi.ee;filter:="(&(osgi.ee
+ =JavaSE)(version=1.5))"
+Service-Component: OSGI-INF/HacWebCommandProvider.xml
+Tool: Bnd-2.3.0.201405100607
