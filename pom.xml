@@ -40,6 +40,7 @@
 		<org.apache.commons.fileupload.version>1.2.2</org.apache.commons.fileupload.version>
 		<org.json.simple.version>1.1</org.json.simple.version>
 		<org.json.version>1.0.0</org.json.version>
+		<org.ops4j.pax.logging.version>1.7.2</org.ops4j.pax.logging.version>
 	</properties>
 	<build>
 		<resources>
@@ -173,6 +174,19 @@
 			<groupId>org.json</groupId>
 			<artifactId>org.json</artifactId>
 			<version>${org.json.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ops4j.pax.logging</groupId>
+			<artifactId>pax-logging-service</artifactId>
+			<version>${org.ops4j.pax.logging.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.ops4j.pax.logging</groupId>
+			<artifactId>pax-logging-api</artifactId>
+			<version>${org.ops4j.pax.logging.version}</version>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
