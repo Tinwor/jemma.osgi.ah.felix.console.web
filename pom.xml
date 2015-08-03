@@ -22,7 +22,7 @@
 	<groupId>org.energy-home</groupId>
 	<artifactId>jemma.osgi.ah.felix.console.web</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.0.10</version>
+	<version>1.0.11</version>
 	<name>AH Apache Felix Web Console Plugin</name>
 
 	<properties>
@@ -67,6 +67,7 @@
 						<Bundle-ManifestVersion>2</Bundle-ManifestVersion>
 						<Bundle-Name>${project.name}</Bundle-Name>
 						<Bundle-Version>${project.version}</Bundle-Version>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Require-Bundle>jemma.osgi.ah.hac.lib;bundle-version="[3.1.0,3.2.0)"</Require-Bundle>
 						<Import-Package>org.energy_home.jemma.ah.hac.lib;version="[3.0.0,3.1.0)",
 							 org.energy_home.jemma.ah.hac.lib.ext;version="[3.4.0,3.5.0)",
@@ -82,11 +83,20 @@
 						<Private-Package>org.energy_home.jemma.ah.felix.console.web</Private-Package>
 						<Service-Component>OSGI-INF/HacWebCommandProvider.xml</Service-Component>
 						<Bundle-Vendor>Telecom Italia</Bundle-Vendor>
-						<Bundle-Category>Automation@Home</Bundle-Category>
+						<Bundle-Category>JEMMA Automation@Home</Bundle-Category>
 						<Bundle-RequiredExecutionEnvironment>J2SE-1.5</Bundle-RequiredExecutionEnvironment>
 					</instructions>
 				</configuration>
 			</plugin>
+			<!-- to launch: mvn java-formatter:format -->
+			<plugin>
+				<groupId>com.googlecode.maven-java-formatter-plugin</groupId>
+				<artifactId>maven-java-formatter-plugin</artifactId>
+				<version>0.4</version>
+				<configuration>
+					<configFile>${project.basedir}/src/main/resources/formatter.xml</configFile>
+				</configuration>
+			</plugin>			
 		</plugins>
 	</build>
 	<repositories>
